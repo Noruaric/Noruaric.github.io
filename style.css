@@ -1,0 +1,59 @@
+:root {
+    --bg-color: lightgray;
+    --text-color: black;
+    --nav-url-color: rgb(0, 0, 0);
+    --nav-link-background-color: rgb(255, 166, 0);
+    --nav-link-hover-color: rgb(160, 104, 0);
+    --nav-link-border-color: rgb(100, 65, 0);
+    --nav-background-color: gray;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-color: #202020;
+        --text-color: lightgray;
+        --nav-background-color: #404040;
+    }
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+}
+
+.nav-links {
+    background-color: var(--nav-background-color);
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+    list-style: none;
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+    overflow: hidden;
+}
+
+.nav-links>li {
+    display: inline;
+}
+
+.nav-links>li>a {
+    border: var(--nav-link-border-color) 2px solid;
+    color: var(--nav-url-color);
+    background-color: var(--nav-link-background-color);
+    text-decoration: none;
+    padding: 5px 5px 5px 5px;
+    float: right;
+}
+
+.nav-links>li>a:hover {
+    background-color: var(--nav-link-hover-color);
+}
+
+.noruaric-text {
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 10px;
+    justify-self: left;
+}
